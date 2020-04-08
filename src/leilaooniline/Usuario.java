@@ -20,6 +20,7 @@ public class Usuario {
     private String login;
     private String senha;
     private String cpf;
+    private Leilao leilao;
     
     public void setEndereco(String endereco) {
         this.endereco = endereco;
@@ -52,7 +53,7 @@ public class Usuario {
     }
     
     public void mandar_lance(Double valor){
-        //receber_lance(valor);
+        leilao.setUltimoLance(valor, this.id_usario);
     }
 
     @Override

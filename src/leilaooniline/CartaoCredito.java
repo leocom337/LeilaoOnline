@@ -1,5 +1,6 @@
 package leilaooniline;
 import java.util.Date;
+import java.util.Objects;
 //Paulo César
 
 public class CartaoCredito {
@@ -71,4 +72,42 @@ private Integer BandeiraCartao;
     public void setBandeiraCartao(Integer BandeiraCartao) {
         this.BandeiraCartao = BandeiraCartao;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 19 * hash + Objects.hashCode(this.NumeroCartao);
+        hash = 19 * hash + Objects.hashCode(this.DataValidade);
+        hash = 19 * hash + Objects.hashCode(this.CodSeguraca);
+        hash = 19 * hash + Objects.hashCode(this.BandeiraCartao);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final CartaoCredito other = (CartaoCredito) obj;
+        if (!Objects.equals(this.NumeroCartao, other.NumeroCartao)) {
+            return false;
+        }
+        if (!Objects.equals(this.DataValidade, other.DataValidade)) {
+            return false;
+        }
+        if (!Objects.equals(this.CodSeguraca, other.CodSeguraca)) {
+            return false;
+        }
+        if (!Objects.equals(this.BandeiraCartao, other.BandeiraCartao)) {
+            return false;
+        }
+        return true;
+    }
+    
 }

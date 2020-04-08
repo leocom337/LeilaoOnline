@@ -6,6 +6,7 @@
 package leilaooniline;
 
 import java.util.Date;
+import java.util.Objects;
 
 /**
  *
@@ -53,6 +54,44 @@ public class Usuario {
     public void mandar_lance(Double valor){
         //receber_lance(valor);
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 19 * hash + Objects.hashCode(this.id_usario);
+        hash = 19 * hash + Objects.hashCode(this.login);
+        hash = 19 * hash + Objects.hashCode(this.senha);
+        hash = 19 * hash + Objects.hashCode(this.cpf);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Usuario other = (Usuario) obj;
+        if (!Objects.equals(this.login, other.login)) {
+            return false;
+        }
+        if (!Objects.equals(this.senha, other.senha)) {
+            return false;
+        }
+        if (!Objects.equals(this.cpf, other.cpf)) {
+            return false;
+        }
+        if (!Objects.equals(this.id_usario, other.id_usario)) {
+            return false;
+        }
+        return true;
+    }
+    
     
     
    

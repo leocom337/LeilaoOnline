@@ -5,11 +5,12 @@ import java.util.Calendar;
 
 
 public class Leilao {
-  private  int idLeilao;
+  private  Integer idLeilao;
   private  Calendar dataLeilao;
   private Double ultimoLance;
+  private Integer idUltimoLance;
 
-    public int getIdLeilao() {
+    public int getIdLeilao() {  
         return idLeilao;
     }
 
@@ -21,8 +22,9 @@ public class Leilao {
         return ultimoLance;
     }
 
-    public void setUltimoLance(Double ultimoLance) {
+    public void setUltimoLance(Double ultimoLance, Integer idUltimoLance) {
         this.ultimoLance = ultimoLance;
+        this.idUltimoLance= idUltimoLance;
     }
     
     public void pesquisar(){

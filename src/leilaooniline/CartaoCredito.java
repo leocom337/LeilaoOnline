@@ -6,15 +6,15 @@ public class CartaoCredito {
     
 private Integer NumeroCartao;
 private Date  DataValidade;
-private String CodSeguraca;
-private String BandeiraCartao;
+private Integer CodSeguraca;
+private Integer BandeiraCartao;
 
 //Buscar número cartão
     public Integer getNumeroCartao()throws Exception{
     if(NumeroCartao.toString().isEmpty())
         throw new Exception("Insira um número para o cartão");
     
-    if(NumeroCartao.toString().length() > 16)
+    if(NumeroCartao.toString().length() != 16 )
         throw new Exception("Insira um número válido");
     
         return NumeroCartao;
@@ -29,17 +29,46 @@ private String BandeiraCartao;
     }
 
     
-    public String getCodSeguraca()throws Exception {
-    if(CodSeguraca.isEmpty())
+    public Integer getCodSeguraca()throws Exception {
+    if(CodSeguraca.toString().isEmpty())
     throw new Exception("Insira um número válido");
         return CodSeguraca;
     }
 
     
-    public String getBandeiraCartao()throws Exception {
-    if(BandeiraCartao.isEmpty())
+    public Integer getBandeiraCartao()throws Exception {
+    if(BandeiraCartao.toString().isEmpty())
     throw new Exception("Insira um valor válido");  
     
         return BandeiraCartao;
+    }
+
+    /**
+     * @param NumeroCartao the NumeroCartao to set
+     */
+    public void setNumeroCartao(Integer NumeroCartao) {
+        
+        this.NumeroCartao = NumeroCartao;
+    }
+
+    /**
+     * @param DataValidade the DataValidade to set
+     */
+    public void setDataValidade(Date DataValidade) {      
+        this.DataValidade = DataValidade;
+    }
+
+    /**
+     * @param CodSeguraca the CodSeguraca to set
+     */
+    public void setCodSeguraca(Integer CodSeguraca) {
+        this.CodSeguraca = CodSeguraca;
+    }
+
+    /**
+     * @param BandeiraCartao the BandeiraCartao to set
+     */
+    public void setBandeiraCartao(Integer BandeiraCartao) {
+        this.BandeiraCartao = BandeiraCartao;
     }
 }

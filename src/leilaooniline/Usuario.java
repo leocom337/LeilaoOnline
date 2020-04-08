@@ -52,8 +52,8 @@ public class Usuario {
         return cpf;
     }
     
-    public void mandar_lance(Double valor){
-        leilao.setUltimoLance(valor, this.id_usario);
+    public void mandar_lance(Double valor, Integer id_leilao){
+        leilao.setUltimoLance(valor, this.id_usario,id_leilao);
     }
 
     @Override

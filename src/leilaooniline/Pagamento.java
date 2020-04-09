@@ -1,4 +1,4 @@
-,lpackage diagnostica2;
+package leilaoonline;
 
 
 public class pagamento {

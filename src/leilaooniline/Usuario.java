@@ -20,7 +20,6 @@ public class Usuario {
     private String login;
     private String senha;
     private String cpf;
-    private Leilao leilao;
     
     public void setEndereco(String endereco) {
         this.endereco = endereco;
@@ -52,10 +51,6 @@ public class Usuario {
         return cpf;
     }
     
-    public void mandar_lance(Double valor, Integer id_leilao){
-        leilao.setUltimoLance(valor, this.id_usario,id_leilao);
-    }
-
     @Override
     public int hashCode() {
         int hash = 7;

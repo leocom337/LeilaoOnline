@@ -1,22 +1,29 @@
 package leilaoonline;
+//Michaellacerda 12105392
 
+import java.util.Calendar;
+import java.util.Objects;
 
 public class pagamento {
     
-       private int qtdeParcelas;
+       private Integer qtdeParcelas;
     
     private  Integer AVISTA = 1;
     private  Integer APRAZO = 2;
     private  calendar dataPagamento;    
     private  Double valorPagamento;
-            
-    public Pagamento(int qtdeParcelas, String data, String descricao, double valor) {
-        super(data, descricao, valor);
+
+    public pagamento(Integer qtdeParcelas, calendar dataPagamento, Double valorPagamento) {
         this.qtdeParcelas = qtdeParcelas;
+        this.dataPagamento = dataPagamento;
+        this.valorPagamento = valorPagamento;
+    }
+            
+   
     }
 
    
-    public Pagamento(int qtdeParcelas) {
+    public Pagamento(Integer qtdeParcelas) {
         this.qtdeParcelas = qtdeParcelas;
     }
 
@@ -25,14 +32,16 @@ public class pagamento {
     }
 
   
-    public void setQtdeParcelas(int qtdeParcelas) {
+    public void setQtdeParcelas(Integer qtdeParcelas) {
         this.qtdeParcelas = qtdeParcelas;
     }
 
-  
+    @Override
     public String toString() {
-        return "Compra{" + data + ", " + descricao + ", " + valor + "(D), " + qtdeParcelas +"  }";
+        return "pagamento{" + "qtdeParcelas=" + qtdeParcelas + ", AVISTA=" + AVISTA + ", APRAZO=" + APRAZO + ", dataPagamento=" + dataPagamento + ", valorPagamento=" + valorPagamento + '}';
     }
+
+  
     
     
     

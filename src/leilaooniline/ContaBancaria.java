@@ -1,6 +1,9 @@
 package leilaooniline;
 //Paulo César
 
+import java.util.Objects;
+
+
 public class ContaBancaria {   
 
 private String NomeBanco; 
@@ -48,9 +51,44 @@ private String Agencia;
      * @param Agencia the Agencia to set
      */
     public void setAgencia(String Agencia) {
-        this.Agencia = Agencia;
+        this.Agencia = Agencia;                      
         
-        
+    }
+
+    @Override
+    public String toString() {
+        return "ContaBancaria{" + "NomeBanco=" + NomeBanco + ", Conta=" + Conta + ", Agencia=" + Agencia + '}';
+    }
+    
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ContaBancaria other = (ContaBancaria) obj;
+        if (!Objects.equals(this.NomeBanco, other.NomeBanco)) {
+            return false;
+        }
+        if (!Objects.equals(this.Agencia, other.Agencia)) {
+            return false;
+        }
+        if (!Objects.equals(this.Conta, other.Conta)) {
+            return false;
+        }
+        return true;
     }
 
 }

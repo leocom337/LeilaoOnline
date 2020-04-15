@@ -25,6 +25,23 @@ public class Usuario {
         this.endereco = endereco;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setDataN(Date dataN) {
+        this.dataN = dataN;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+    
+
     public void setSenha(String senha) {
         this.senha = senha;
     }
@@ -55,8 +72,6 @@ public class Usuario {
     public int hashCode() {
         int hash = 7;
         hash = 19 * hash + Objects.hashCode(this.id_usario);
-        hash = 19 * hash + Objects.hashCode(this.login);
-        hash = 19 * hash + Objects.hashCode(this.senha);
         hash = 19 * hash + Objects.hashCode(this.cpf);
         return hash;
     }
@@ -73,12 +88,6 @@ public class Usuario {
             return false;
         }
         final Usuario other = (Usuario) obj;
-        if (!Objects.equals(this.login, other.login)) {
-            return false;
-        }
-        if (!Objects.equals(this.senha, other.senha)) {
-            return false;
-        }
         if (!Objects.equals(this.cpf, other.cpf)) {
             return false;
         }

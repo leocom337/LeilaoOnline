@@ -74,6 +74,12 @@ private Integer BandeiraCartao;
     }
 
     @Override
+    public String toString() {
+        return "CartaoCredito{" + "NumeroCartao=" + NumeroCartao + ", DataValidade=" + DataValidade + ", CodSeguraca=" + CodSeguraca + ", BandeiraCartao=" + BandeiraCartao + '}';
+    }    
+    
+
+    @Override
     public int hashCode() {
         int hash = 7;
         hash = 19 * hash + Objects.hashCode(this.NumeroCartao);

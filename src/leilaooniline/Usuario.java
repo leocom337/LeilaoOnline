@@ -54,15 +54,6 @@ public class Usuario {
         return id_usario;
     }
 
-    public String getLogin() {
-        return login;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-
     public String getNome() {
         return nome;
     }

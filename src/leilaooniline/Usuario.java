@@ -20,6 +20,16 @@ public class Usuario {
     private String login;
     private String senha;
     private String cpf;
+
+    public Usuario(Integer id_usario, String nome, String endereco, Date dataN, String login, String senha, String cpf) {
+        this.id_usario = id_usario;
+        this.nome = nome;
+        this.endereco = endereco;
+        this.dataN = dataN;
+        this.login = login;
+        this.senha = senha;
+        this.cpf = cpf;
+    }
     
     public void setEndereco(String endereco) {
         this.endereco = endereco;

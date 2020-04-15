@@ -40,7 +40,7 @@ public class Usuario {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-    
+
 
     public void setSenha(String senha) {
         this.senha = senha;
@@ -50,9 +50,16 @@ public class Usuario {
         return endereco;
     }
 
-    public Integer getId_usario(String login, String senha) {
-        if(!this.login.equals(login)&&!this.senha.equals(senha)){}
+     public Integer getId_usario() {
         return id_usario;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public String getSenha() {
+        return senha;
     }
 
 

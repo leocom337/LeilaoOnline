@@ -9,6 +9,13 @@ public class ContaBancaria {
 private String NomeBanco; 
 private Integer Conta;
 private String Agencia;
+
+    public ContaBancaria(String NomeBanco, Integer Conta, String Agencia) {
+        this.NomeBanco = NomeBanco;
+        this.Conta = Conta;
+        this.Agencia = Agencia;
+    }
+
     
     public String getNomeBanco()throws Exception {
     if(NomeBanco.isEmpty())

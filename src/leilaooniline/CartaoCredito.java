@@ -10,6 +10,13 @@ private Date  DataValidade;
 private Integer CodSeguraca;
 private Integer BandeiraCartao;
 
+    public CartaoCredito(Integer NumeroCartao, Date DataValidade, Integer CodSeguraca, Integer BandeiraCartao) {
+        this.NumeroCartao = NumeroCartao;
+        this.DataValidade = DataValidade;
+        this.CodSeguraca = CodSeguraca;
+        this.BandeiraCartao = BandeiraCartao;
+    }
+
 //Buscar número cartão
     public Integer getNumeroCartao()throws Exception{
     if(NumeroCartao.toString().isEmpty())
